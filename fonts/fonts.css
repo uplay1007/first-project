@@ -1,9 +1,14 @@
 @font-face {
-    src: url(/Users/ilyalevashov/Downloads/Raleway/static/Raleway-Regular.ttf);
-    font-family: "Raleway";
+    src: url("/fonts/Raleway-Regular.woff");
+    font-family: "Raleway Reg";
 }
 
 @font-face {
-    src: url(/Users/ilyalevashov/Downloads/Raleway/static/Raleway-Bold.ttf);
-    font-family: "Raleway";
+    src: url('/fonts/Raleway-Bold.woff');
+    font-family: "Raleway Bold";
+}
+
+@font-face {
+    src: url('/fonts/Raleway-Medium.woff');
+    font-family: "Raleway Med";
 }
