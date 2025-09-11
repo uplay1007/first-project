@@ -1,5 +1,15 @@
 @import url(/fonts/fonts.css);
 
+body {
+    width: 1100px;
+  margin: 0 auto;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+a {
+    all: unset;
+}
+
 .header {
     max-height: 293px;
     display: grid;
@@ -13,15 +23,24 @@
 }
 .menu__list {
     display: inline-flex;
-    gap: 10px;
-    list-style: circle inside;    
+    gap: 10px;   
 }
 
 .menu__item {
+    list-style: circle inside; 
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+    line-height: 1;
     font-size: 18px;
-    font-weight: 400;
-    font-family: "Raleway Reg", sans-serif;
+    font-weight: 100;
 }
+
+.active {
+    list-style: none;
+    text-decoration: none;
+}
+
 .logo_one {
     display: block;
     width: 150px;
@@ -31,12 +50,12 @@
     display: flex;
     max-width: 240px;
     height: 100px;
+    line-height: 24px;
     flex-direction: column;
     justify-self:end;
     align-items: flex-start;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Raleway Reg", sans-serif;
 }
 
 .main {}
@@ -58,8 +77,8 @@
     row-gap: 24.5px;
     margin-bottom: 135px;
     text-transform:uppercase;
-    font-family: "Raleway Bold", sans-serif;
-    font-weight: 700;
+    font-weight: bold;
+
     font-size: 100px;
     letter-spacing: 30px;
 }
@@ -75,6 +94,7 @@
 }
 .aligned-text-right {
     text-align: right;
+    translate: 30px;
 }
 .cover_description {
     position: relative;
@@ -83,7 +103,6 @@
     align-items: center;
 }
 .desc_text {
-    font-family: "Raleway Reg", sans-serif;
     font-weight: 400;
     color: white;
     font-size: 22px;
@@ -92,7 +111,6 @@
     text-transform: uppercase;
 }
 .desc_btn {
-
     width: 256px;
     height: 51px;
     padding: 12px 32px;
@@ -102,12 +120,10 @@
     border: 1px solid white;
     background-color: transparent;
     margin-left: auto; 
-    font-family: "Raleway Reg", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     color: white;
     font-size: 22px;
     line-height: 100%;
-    letter-spacing: 0%;
     text-transform: uppercase;
 }
 
@@ -116,7 +132,14 @@
     display: grid;
     margin: 180px 24px 120px;
 }
-.lots_phrase {}
+.lot_phrase {
+    margin: 0px 0px 27px 40px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+}
 .lots_cards {
     display: flex;
     flex-wrap: wrap;
@@ -124,37 +147,73 @@
     list-style: none;
 }
 .lots_cards_item {
-    flex-grow: 1;
+    position: relative;
+    width: 334px;
+    height: 596px;
+
 }
 .lot_link{
     display: block;
+    height: 100%;
 }
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 334px;
-    height: 596px;
+    height: 100%
 }
-.card_title {}
-.card_desc {}
-.view_more {}
-.card_direct {
-    background-image: url(/images/lot1.png);
+.card_title {
+    padding: 48px 40px 0;;
+    position: relative;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: #fff;
+    line-height: 1.2;
+    z-index: 1;
+
+
+
+}
+.card_desc {
+    padding: 0 40px 48px;
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    line-height: 120%;
+
+}
+.view_more {
+    text-align: right;
+    padding: 30px 820px 40px 2px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: underline;
+    color:rgba(0, 0, 0, 1) 
+}
+
+.card_image {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+}
+
+.card_direct {
+    background-image: url(/images/lot1.png);
 }
 .card_book {
     background-image: url(/images/lot2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 
 .card_picture {
     background-image: url(/images/lot3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 
 .about {
@@ -180,6 +239,7 @@
 .pntrst {}
 
 .overlay {
+
     position: absolute;
     background-color: rgba(0, 0, 0, 0.55);
     inset: 0;
