@@ -129,7 +129,6 @@ a {
 
 
 .lots {
-    display: grid;
     margin: 180px 24px 120px;
 }
 .lot_phrase {
@@ -145,18 +144,18 @@ a {
     flex-wrap: wrap;
     gap: 25px;
     list-style: none;
+    column-gap: 25px;
 }
 .lots_cards_item {
     position: relative;
     width: 334px;
-    height: 596px;
-
 }
 .lot_link{
     display: block;
     height: 100%;
 }
 .card {
+    gap: 30px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -218,9 +217,17 @@ a {
 
 .about {
     display: grid;
+    grid-template-columns: 334px auto;
     margin: 120px 24px 180px;
+
 }
-.logo_container {}
+.logo_container {
+    padding-top: 35px;
+    padding-left: 47px;
+    
+    background-color: black;
+    border-radius: 240px;
+}
 .logo_two {}
 .about_desc {}
 .about_title {}
